@@ -1,0 +1,480 @@
+html {
+    scroll-behavior: smooth;
+} 
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.1em;
+    letter-spacing: 3px;
+    padding:0;
+    margin:0;
+    background-color:#EDF2EF;
+    text-transform: uppercase;
+}
+
+
+section {
+    height:100dvh;
+    width: 100vw;
+    display: flex;
+    margin:0;
+    padding:0;
+
+}
+
+.page {
+    overflow-y: scroll; 
+    scroll-snap-type: y mandatory;
+}
+
+/*********************************************************HOME****************************************************************/
+#home {
+    justify-content: center;
+    align-items: center;
+    background-image: url('./img/background_3.jpg');
+    background-size:cover;
+    background-position: center;
+}
+
+.showcase {
+    flex-direction: column; 
+}
+
+.showcase h1 {
+    margin: 0;
+    line-height: 125px;
+    font-size: 10rem;
+    background: linear-gradient(to right, #100B00, #581303); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    transition: all 1s ease-in-out;
+
+}
+
+.showcase h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+    line-height: 35px;
+    width: fit-content;
+    margin: 0 auto;
+    background: linear-gradient(to right, #860808, #581303);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: font-size 1s ease-in-out;
+}
+
+.showcase nav {
+    margin-top: 30px; 
+}
+
+.showcase nav ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none;
+    text-align: center; 
+}
+
+.showcase nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.showcase nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #f2eded;
+    background-image: linear-gradient(90deg, #860808, #581303);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease, font-size 1s ease;
+
+}
+
+.showcase nav a:hover {
+    background-size: 100% 3px;
+}
+
+/*********************************************************TOUR DATES****************************************************************/
+#tour-dates {
+    background-image: url('./img/background_2.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+}
+
+.navbar {
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    padding:0;
+    margin:0;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    
+}
+
+.showcase nav ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none;
+    text-align: center; 
+}
+
+.navbar nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #f2eded;
+    background-image: linear-gradient(90deg, #979797, #581303);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease, font-size 1s ease, color 300ms ease;
+
+}
+
+.navbar nav a:hover {
+    background-size: 100% 3px;
+}
+
+.navbar nav .td-heading {
+    color: #860808;
+    text-transform: uppercase;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50dvh;
+    
+}
+
+.t-table {
+    border-collapse: collapse; 
+    margin:20px 0;
+    font-size: 0.9em;
+    width:80%;
+    border-radius: 5px 5px 0 0 ;
+    overflow: hidden;
+    box-shadow: 0 0 20px #EDF2EF;
+}
+
+.t-table thead tr {
+    background-color: #581303;
+    height: 30px;
+    color:#EDF2EF;
+    text-align: left;
+    font-weight: bold;
+}
+
+.t-table thead th {
+    padding: 10px;
+}
+.t-table td {
+    padding: 12px 15px;
+}
+
+.t-table tbody tr {
+    background-color: #2929299d;
+    color:#EDF2EF;
+    border-bottom: 1px solid #dddddddd ;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.t-table tbody tr:nth-of-type(even) {
+    background-color: #939393be;
+}
+
+.t-table tbody tr:hover {
+    transform: scale(1.01);
+}
+
+
+/*********************************************************GALLERY****************************************************************/
+#gallery {
+    background-image: url('./img/background_4.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+}
+
+#gallery .navbar {
+    margin-bottom: 30px;
+}
+
+#gallery .navbar .current {
+    color: #860808;
+}
+
+#gallery .navbar nav a {
+    color: #4d4d4d;
+    background-image: linear-gradient(90deg, #979797, #581303);
+}
+
+.img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+
+.img-gallery img {
+    width: calc(20% - 4px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/*********************************************************SHOP****************************************************************/
+#shop {
+    background-image: url('./img/background_1.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+}
+
+#shop .navbar nav a {
+    color:#4d4d4d;
+    background-image: linear-gradient(90deg, #979797, #581303);
+}
+
+#shop .navbar nav .sh-heading {
+    color:#860808;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #860808;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #c3c3c3c4;
+    box-shadow: 0 2px 5px #292929;
+    border: #860808 1px solid;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 20px;
+    letter-spacing: 1px;
+    transition: all 200ms ease;
+}
+
+.card img {
+    width: 100%;
+    height: 60%;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+
+}
+
+.card-content h3 {
+    color:#860808;
+    text-shadow: 1px 1px 2px #100b0095;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.card-content p{
+    color:#100B00;
+    line-height: 1.3;
+}
+
+.card-content a {
+    text-decoration: none;
+    color:#EDF2EF;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/*********************************************************ABOUT****************************************************************/
+
+#about {
+    background-image: url('./img/background_5.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+}
+
+#about .navbar nav a {
+    color:#4d4d4d;
+}
+#about .navbar nav .sh-heading {
+    color:#860808;
+}
+
+.left-column {
+    float:left;
+    width: 50%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+#about h1{
+    color: #860808
+}
+#about video {
+    float:right;
+    aspect-ratio: 16/9;
+    margin:20px 60px 20px 20px;
+}
+
+.social {
+    float: right;
+    align-items: center;
+    transform: translatex(-100%);
+}
+
+/*********************************************************FOOTER********************************************************************/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********************************************************RESPONSIVE****************************************************************/
+@media screen and (max-width: 900px) {
+
+    .showcase h1 {
+        margin:0px;
+        line-height: 65px;
+        font-size: 5rem;
+    }
+
+    .showcase h2 {
+        font-size: 1.7rem;
+    }
+    .showcase nav li {
+        display:block;
+    }
+
+    #tour-dates {
+        height: 100dvh;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+
+    .navbar nav ul {
+        padding:0;
+        justify-content: center;
+    }
+
+    .showcase nav a {
+        font-size: 1rem;
+    }
+
+    .navbar nav li {
+        display: block;
+    }
+
+    .navbar nav a {
+        color:#4d4d4d;
+    }
+
+    .t-table th:first-child,
+    .t-table td:first-child {
+        display: none;
+    }
+
+    #gallery {
+        height: auto;
+    }
+
+    .img-gallery img {
+        width: calc(50%);
+    }
+
+    #shop {
+        height: auto;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    .left-column {
+        float: none;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding:0;
+        margin: 0 auto;
+    }
+
+    #about video {
+        width:300px;
+        float:none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social {
+        float:none;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ---------------------------------------------------------PHONE SIZE--------------------------------------------------------------------------*/
+@media screen and (max-width: 500px) {
+    
+    .showcase h1 {
+        
+        font-size: 3rem;
+    }
+
+    .t-table th:nth-child(2),
+    .t-table td:nth-child(2) {
+        display: none;
+    }
+}
